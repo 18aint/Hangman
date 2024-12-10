@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Hangman</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/game.css">
+    <link rel="stylesheet" href="../css/achievements.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="../index.html" class="navbar-brand">Hangman</a>
+            <div class="navbar-links">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="game.html" class="nav-link">Play Game</a>
+                <a href="rankings.html" class="nav-link">Rankings</a>
+                <a href="achievements.html" class="nav-link">
+                    Achievements
+                    <span class="achievements-count" id="achievements-count"></span>
+                </a>
+                <div class="user-stats">
+                    <span class="user-name" id="currentUserName"></span>
+                    <span class="high-score">High Score: <span id="globalHighScore">0</span></span>
+                </div>
+                <a href="login.html" id="logoutBtn" class="logout-btn">
+                    Logout
+                </a>
+            </div>
+        </div>
+        </div>
+    </nav>
+    <main class="main-container">
+        <div class="game-container">
+        </div>
+    </main>
+    <div id="message-container" class="message-container"></div>
+    <script type="module" src="../js/modules/game.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Hangman Game</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/game.css"></head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="../index.html" class="navbar-brand">Hangman</a>
+            <div class="navbar-links">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="#" class="nav-link">Play Game</a>
+                <a href="#" class="nav-link">Rankings</a>
+                <a href="login.html" class="nav-link auth-link">Login</a>
+            </div>
+        </div>
+    </nav>
+    <main class="container">
+        <div class="form-container">
+            <h2>Create Account</h2>
+            <form id="register-form">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" required pattern="[a-zA-Z0-9_]{3,20}">
+                    <small class="message">3-20 characters, letters, numbers and underscore only</small>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                    <small class="message">Enter a valid email address</small>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required pattern="^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,}$">
+                    <small class="message">Minimum 8 characters, 1 uppercase, 1 number, 1 special character</small>
+                </div>
+                <div class="form-group">
+                    <label for="memorable-word">Memorable Word</label>
+                    <input type="text" id="memorable-word" required minlength="6">
+                    <small class="message">Minimum 6 characters</small>
+                </div>
+                <button type="submit" class="btn btn-primary">Create Account</button>
+            </form>
+            <p class="form-footer">
+                Already have an account? <a href="login.html">Login here</a>
+            </p>
+        </div>
+    </main>
+    <script type="module" src="../js/modules/auth.js"></script>
+    <script type="module" src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman - Rankings</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <style>
+        .rankings-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem;
+        }
+
+        .rankings-table {
+            width: 100%;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .rankings-table th,
+        .rankings-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        .rankings-table th {
+            background-color: #4a90e2;
+            color: white;
+            font-weight: bold;
+        }
+
+        .rankings-table tr:hover {
+            background-color: #f8f9fa;
+        }
+
+        .current-user {
+            background-color: rgba(74, 144, 226, 0.1);
+            font-weight: bold;
+        }
+
+        .debug-section {
+            margin-top: 1rem;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .no-data {
+            text-align: center;
+            padding: 2rem;
+            color: #666;
+            font-style: italic;
+        }
+
+        .refresh-button {
+            margin-bottom: 1rem;
+            padding: 0.5rem 1rem;
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .refresh-button:hover {
+            background-color: #357abd;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="../index.html" class="navbar-brand">Hangman</a>
+            <div class="navbar-links">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="game.html" class="nav-link">Play Game</a>
+                <a href="rankings.html" class="nav-link">Rankings</a>
+                <a href="achievements.html" class="nav-link">
+                Achievements
+                    <span class="achievements-count" id="achievements-count"></span>
+                </a>
+            </div>
+        </div>
+        
+    </nav>
+    <main class="rankings-container">
+        <h2>Global Rankings</h2>
+        <button class="refresh-button" onclick="window.location.reload()">
+            Refresh Rankings
+        </button>
+
+        <table class="rankings-table">
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Player</th>
+                    <th>High Score</th>
+                </tr>
+            </thead>
+            <tbody id="rankings-body">
+            </tbody>
+        </table>
+    <script type="module" src="../js/modules/rankings.js"></script>
+</body>
+</html>

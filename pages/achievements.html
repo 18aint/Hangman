@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achievements - Hangman Game</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/achievements.css">
+</head>
+<body>
+       <!-- Navbar -->
+       <nav class="navbar">
+        <div class="navbar-content">
+            <a href="../index.html" class="navbar-brand">Hangman</a>
+            <div class="navbar-links">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="game.html" class="nav-link">Play Game</a>
+                <a href="rankings.html" class="nav-link">Rankings</a>
+                <a href="achievements.html" class="nav-link active">
+                    🏆 Achievements
+                    <span class="achievements-count" id="achievements-count"></span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+
+        <!-- Achievements Section -->
+        <section class="achievements-container" id="achievements-container">
+            <!-- Achievements will be dynamically populated here -->
+        </section>
+    </main>
+    <script type="module">
+        import { AchievementsManager } from '../js/modules/achievements.js';
+        import { StorageManager } from '../js/modules/storage.js';
+        document.addEventListener('DOMContentLoaded', () => {
+            const storage = new StorageManager();
+            const achievementsManager = new AchievementsManager(storage);
+            achievementsManager.displayAchievements();
+        });
+    </script>
+    <script type="module" src="../js/main.js"></script>
+    <script type="module" src="../js/modules/achievements.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Hangman Game</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/game.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="index.html" class="navbar-brand">Hangman</a>
+            <div class="navbar-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="pages/game.html" class="nav-link">Play Game</a>
+                <a href="pages/rankings.html" class="nav-link">Rankings</a>
+                <a href="pages/register.html" class="nav-link auth-link register">Register</a>
+                <a href="pages/login.html" class="nav-link auth-link">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-container">
+        <section class="welcome-section">
+            <h1 class="welcome-title">Welcome to Hangman</h1>
+            <div class="action-buttons">
+                <a href="pages/game.html" class="action-btn play-btn">Play Game</a>
+                <a href="pages/rankings.html" class="action-btn rankings-btn">View Rankings</a>
+            </div>
+        </section>
+
+        <section class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🎯</div>
+                <h3 class="feature-title">Multiple Difficulty Levels</h3>
+                <p class="feature-text">Choose from different difficulty levels to match your skill</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🏆</div>
+                <h3 class="feature-title">Compete Globally</h3>
+                <p class="feature-text">Compare your scores with players worldwide</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">💾</div>
+                <h3 class="feature-title">Save Progress</h3>
+                <p class="feature-text">Create an account to track your achievements</p>
+            </div>
+        </section>
+    </main>
+    <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/modules/auth.js"></script>
+    <script type="module" src="./js/main.js"></script>
+</body>
+
+</html>
